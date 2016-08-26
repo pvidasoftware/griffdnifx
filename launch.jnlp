@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jnlp spec='7.0' href='launch.jnlp' version='0.1.0-SNAPSHOT' codebase='https://pvidasoftware.github.io/griffdnifx/'>
+  <information>
+    <title>griffdnifx</title>
+    <vendor>com.puravida</vendor>
+  </information>
+  <security>
+    <all-permissions />
+  </security>
+  <resources>
+    <j2se version='7.0+' max-heap-size='256m' />
+    <jar href='lib/jfxrt.jar' />
+    <jar href='lib/griffon-guice__V2.7.0.jar' />
+    <jar href='lib/bootstrapfx-core__V0.2.0.jar' />
+    <jar href='lib/jmulticard-jse__V1.4.jar' />
+    <jar href='lib/jmulticard-ui__V1.4.jar' />
+    <jar href='lib/bcprov-jdk15on__V1.54.jar' />
+    <jar href='lib/bcmail-jdk15on__V1.54.jar' />
+    <jar href='lib/pdfbox__V2.0.1.jar' />
+    <jar href='lib/griffon-core__V2.7.0.jar' />
+    <jar href='lib/griffon-core-java8__V2.7.0.jar' />
+    <jar href='lib/griffon-javafx__V2.7.0.jar' />
+    <jar href='lib/griffon-javafx-groovy__V2.7.0.jar' />
+    <jar href='lib/griffon-groovy__V2.7.0.jar' />
+    <jar href='lib/griffon-wslite-core__V1.1.0.jar' />
+    <jar href='lib/griffon-glazedlists-core__V1.3.1.jar' />
+    <jar href='lib/griffon-glazedlists-core-groovy__V1.3.1.jar' />
+    <jar href='lib/griffon-glazedlists-javafx__V1.3.1.jar' />
+    <jar href='lib/griffon-glazedlists-javafx-groovy__V1.3.1.jar' />
+    <jar href='lib/griffon-fontawesome-core__V1.4.0.jar' />
+    <jar href='lib/griffon-fontawesome-javafx__V1.4.0.jar' />
+    <jar href='lib/griffon-fontawesome-javafx-groovy__V1.4.0.jar' />
+    <jar href='lib/griffdnifx__V0.1.0-SNAPSHOT.jar' main='true' />
+    <jar href='lib/slf4j-simple__V1.7.21.jar' />
+    <jar href='lib/guice__V4.1.0.jar' />
+    <jar href='lib/jmulticard__V1.4.jar' />
+    <jar href='lib/jmulticard-jsr268__V1.4.jar' />
+    <jar href='lib/bcpkix-jdk15on__V1.54.jar' />
+    <jar href='lib/fontbox__V2.0.1.jar' />
+    <jar href='lib/commons-logging__V1.2.jar' />
+    <jar href='lib/javax.inject__V1.jar' />
+    <jar href='lib/jsr305__V3.0.1.jar' />
+    <jar href='lib/slf4j-api__V1.7.21.jar' />
+    <jar href='lib/groovyfx__V8.0.0.jar' />
+    <jar href='lib/groovy-all__V2.4.7.jar' />
+    <jar href='lib/griffon-monitor-core__V1.1.0.jar' />
+    <jar href='lib/groovy-wslite__V1.1.0.jar' />
+    <jar href='lib/glazedlists_java15__V1.9.1.jar' />
+    <jar href='lib/font-awesome__V4.4.0.jar' />
+    <jar href='lib/aopalliance__V1.0.jar' />
+    <jar href='lib/guava__V19.0.jar' />
+    <jar href='lib/core__V1.54.0.0.jar' />
+    <jar href='lib/prov__V1.54.0.0.jar' />
+  </resources>
+  <application-desc main-class='com.puravida.Launcher'>
+    <argument>-verbose</argument>
+  </application-desc>
+</jnlp>
