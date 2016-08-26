@@ -23,6 +23,8 @@ class RestView extends AbstractJavaFXGriffonView  implements ShowHideTabTrait{
 
     GriffdnifxView parentView
 
+    Tab tab
+
     void initUI() {
         builder.with{
             content = fxml(resource('/com/puravida/restview.fxml')) {
@@ -42,12 +44,12 @@ class RestView extends AbstractJavaFXGriffonView  implements ShowHideTabTrait{
         }
         connectActions(builder.content, controller)
 
-        Tab tab = new Tab('Verification')
+        tab = new Tab('REST')
         tab.graphic = new FontAwesomeIcon(FontAwesome.FA_ROCKET)
         tab.content = builder.content
         tab.closable = false
-        builder.mainTab = tab
-        parentView.tabPane.tabs.add(builder.mainTab);
+
+        parentView.tabPane.tabs.add(tab);
     }
 
 }

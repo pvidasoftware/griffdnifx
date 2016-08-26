@@ -21,6 +21,8 @@ class LoginView implements ShowHideTabTrait{
 
     GriffdnifxView parentView
 
+    Tab tab
+
     void initUI() {
         FontAwesomeIcon icon = new FontAwesomeIcon(FontAwesome.FA_SIGN_IN)
 
@@ -62,7 +64,7 @@ class LoginView implements ShowHideTabTrait{
                         }
                     }
 
-                    group(id:'logout'){
+                    group(id:'retire'){
                         borderPane(styleClass: ['panel']){
                             top{
                                 pane(styleClass: ['panel-heading']){
@@ -72,7 +74,7 @@ class LoginView implements ShowHideTabTrait{
                             center{
                                 pane(styleClass: ['panel-body']) {
                                     button styleClass: ['btn', 'btn-lg', 'btn-default'],
-                                            text: 'Retirado', logoutAction
+                                            text: 'Retirado', dniRetiredAction
                                 }
                             }
                         }
@@ -82,7 +84,7 @@ class LoginView implements ShowHideTabTrait{
             }
         }
         showFirst()
-        parentView.tabPane.tabs.add(builder.mainTab);
+        parentView.tabPane.tabs.add(tab=builder.mainTab);
     }
 
 
@@ -90,18 +92,20 @@ class LoginView implements ShowHideTabTrait{
     void showFirst(){
         builder.stack.children.clear()
         builder.stack.children.add( builder.login )
+        show()
     }
 
     @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
     void showSecond(){
         builder.stack.children.clear()
         builder.stack.children.add( builder.espere )
+        show()
     }
 
     @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
-    void showLogout(){
+    void showRetire(){
         builder.stack.children.clear()
-        builder.stack.children.add( builder.logout )
+        builder.stack.children.add( builder.retire )
         show()
     }
 }

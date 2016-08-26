@@ -30,6 +30,12 @@ mvcGroups {
         view       = 'com.puravida.AgreementView'
         controller = 'com.puravida.AgreementController'
     }
+
+    'chart'{
+        model      = 'com.puravida.ChartModel'
+        view       = 'com.puravida.ChartView'
+        controller = 'com.puravida.ChartController'
+    }
 }
 
 windowManager {

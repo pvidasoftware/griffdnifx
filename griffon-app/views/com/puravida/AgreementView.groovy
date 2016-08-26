@@ -14,6 +14,8 @@ class AgreementView implements ShowHideTabTrait{
 
     GriffdnifxView parentView
 
+    Tab tab
+
     void initUI() {
         FontAwesomeIcon icon = new FontAwesomeIcon(FontAwesome.FA_FILE_PDF_O)
         builder.with{
@@ -31,7 +33,7 @@ class AgreementView implements ShowHideTabTrait{
         }
         String url = getClass().getResource("web/viewer.html").toExternalForm() + "?file=MadridGUG.pdf"
         builder.browser.engine.load(url)
-        parentView.tabPane.tabs.add(builder.mainTab);
+        parentView.tabPane.tabs.add(tab=builder.mainTab);
     }
 
 }

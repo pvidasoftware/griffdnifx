@@ -19,7 +19,6 @@ class LoginController {
 
     @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
     void doAction() {
-        view.show()
         view.showFirst()
     }
 
@@ -31,7 +30,6 @@ class LoginController {
             try {
                 model.dnie = dnieService.identifyUser()
                 parentController.userLogged(model.dnie)
-                view.showLogout()
             } catch (e) {
                 model.error = "$e"
                 view.showFirst()
@@ -39,9 +37,13 @@ class LoginController {
         }
     }
 
+    @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
+    void doFinish() {
+        view.showRetire()
+    }
+
     @Threading(Threading.Policy.INSIDE_UITHREAD_SYNC)
-    void logout() {
-        view.showFirst()
+    void dniRetired() {
         parentController.logout()
     }
 

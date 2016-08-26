@@ -2,10 +2,10 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
 <?import org.kordamp.bootstrapfx.scene.layout.Panel?>
 
 <Panel styleClass="panel-default" xmlns="http://javafx.com/javafx/8.0.102-ea" xmlns:fx="http://javafx.com/fxml/1">
@@ -20,3 +20,12 @@
         <TableView fx:id="tableView"/>
     </body>
 </Panel>
+
+<!--Pane styleClass="panel-default" xmlns="http://javafx.com/javafx/8.0.102-ea" xmlns:fx="http://javafx.com/fxml/1">
+        <FlowPane BorderPane.alignment="CENTER">
+            <Label text="Buscando:" BorderPane.alignment="CENTER" />
+            <Label fx:id="labelNif" text="" BorderPane.alignment="CENTER" />
+            <Button fx:id="nextActionTarget" mnemonicParsing="false" text="Next" />
+        </FlowPane>
+        <TableView fx:id="tableView"/>
+</Pane-->

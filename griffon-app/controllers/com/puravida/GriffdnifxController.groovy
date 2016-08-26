@@ -29,6 +29,7 @@ class GriffdnifxController implements ShutdownHandler{
         createMVCGroup("login");
         createMVCGroup("rest");
         createMVCGroup("agreement");
+        createMVCGroup("chart");
 
         logout()
     }
@@ -46,13 +47,14 @@ class GriffdnifxController implements ShutdownHandler{
 
     void logout() {
         runInsideUIAsync {
-
             model.userLogout()  // canExit = true
 
             ['rest', 'agreement'].each { id ->
                 MVCGroup group = application.mvcGroupManager.findGroup(id)
                 group.controller.logout()
             }
+
+            login()
         }
     }
 
@@ -75,7 +77,7 @@ class GriffdnifxController implements ShutdownHandler{
     void agreementAcepted(){
         runInsideUIAsync {
             MVCGroup group = application.mvcGroupManager.findGroup('login')
-            group.view.showLogout();
+            group.controller.doFinish()
         }
     }
 }

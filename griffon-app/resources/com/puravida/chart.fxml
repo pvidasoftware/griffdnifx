@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane prefHeight="200.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8.0.102-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <PieChart fx:id="pieChart" title="Ejemplo" BorderPane.alignment="CENTER" />
+   </center>
+   <top>
+      <Button fx:id="nextActionTarget" text="Refresh" BorderPane.alignment="CENTER" />
+   </top>
+</BorderPane>

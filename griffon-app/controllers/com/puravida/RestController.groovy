@@ -35,10 +35,12 @@ class RestController {
 
     void doAction( String nif) {
         model.nif = nif
-        model.list.clear()
-        rowIndex = 1
-        next()
         view.show()
+        runFuture {
+            model.list.clear()
+            rowIndex = 1
+            next()
+        }
     }
 
     @Threading(Threading.Policy.OUTSIDE_UITHREAD)
