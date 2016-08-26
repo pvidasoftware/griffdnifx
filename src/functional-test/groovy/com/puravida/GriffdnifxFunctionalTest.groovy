@@ -17,10 +17,10 @@ class GriffdnifxFunctionalTest {
     @Test
     void _01_clickButton() {
         // given:
-        verifyThat('#clickLabel', hasText('0'))
+       // verifyThat('#clickLabel', hasText('0'))
 
         // when:
-        testfx.clickOn('#clickActionTarget')
+        //testfx.clickOn('#clickActionTarget')
 
         // then:
         //verifyThat('#clickLabel', hasText('1'))
