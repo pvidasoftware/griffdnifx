@@ -11,7 +11,7 @@ buildscript {
 apply plugin: 'org.ajoberstar.github-pages'                      
 
 githubPages {
-  repoUri = 'https://github.com/pvidasoftware/griffdni.git'
+  repoUri = 'https://github.com/pvidasoftware/griffdnifx.git'
   pages {
      from(file('build/publish')) {
      	into '.'                                    
