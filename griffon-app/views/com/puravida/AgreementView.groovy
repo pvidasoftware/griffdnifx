@@ -31,7 +31,7 @@ class AgreementView implements ShowHideTabTrait{
                 }
             }
         }
-        String url = getClass().getResource("web/viewer.html").toExternalForm() + "?file=MadridGUG.pdf"
+        String url = getClass().getResource("web/viewer.html").toExternalForm() + "?file=${model.agreementFile}"
         builder.browser.engine.load(url)
         parentView.tabPane.tabs.add(tab=builder.mainTab);
     }

@@ -30,7 +30,7 @@ class AgreementController {
     void userAgree(){
 
         signPdfService.signPdf model.dnie,
-                getClass().getResourceAsStream("web/MadridGUG.pdf"),
+                getClass().getResourceAsStream("web/${model.agreementFile}"),
                 new File("agreements/Agreement_${model.dnie.serialnumber}.pdf")
 
 

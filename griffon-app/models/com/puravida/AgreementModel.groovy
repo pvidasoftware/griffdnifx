@@ -9,4 +9,6 @@ class AgreementModel {
 
     Dnie dnie
 
+    String agreementFile = "MadridGUG.pdf"
+
 }
